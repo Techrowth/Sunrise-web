@@ -1,0 +1,145 @@
+
+                <div className="col">
+                  <nav className="header__menu--navigation">
+                    <ul className="d-flex">
+                      <li className="header__menu--items style2">
+                        <Link to='/' className="header__menu--link" >Home
+                        </Link>
+                      </li>
+                      <li className="header__menu--items mega__menu--items style2">
+                        <Link className="header__menu--link" to="/shop">Shop
+                          <svg className="menu__arrowdown--icon" xmlns="http://www.w3.org/2000/svg" width={12} height="7.41" viewBox="0 0 12 7.41">
+                            <path d="M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z" transform="translate(-6 -8.59)" fill="currentColor" opacity="0.7" />
+                          </svg>
+                        </Link>
+                        <ul className="header__mega--menu d-flex">
+                          <li className="header__mega--menu__li">
+                            <span className="header__mega--subtitle">Men</span>
+                            <ul className="header__mega--sub__menu">
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Round Neck T-shirt</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">V-Cut Neck T-shirt</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Full Sleev T-shirt</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Oversized T-shirt</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Vest</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Customized Works</Link></li>
+                            </ul>
+                          </li>
+                          <li className="header__mega--menu__li">
+                            <span className="header__mega--subtitle">Women</span>
+                            <ul className="header__mega--sub__menu">
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Round Neck T-shirt</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">V-Cut Neck T-shirt</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Full Sleev T-shirt</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Oversized T-shirt</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Vest</Link></li>
+                              <li className="header__mega--sub__menu_li"><Link className="header__mega--sub__menu--title" to="/shop">Customized Works</Link></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="header__menu--items style2">
+                        <Link className="header__menu--link" to="/about-us">About US </Link>
+                      </li>
+                      <li className="header__menu--items style2">
+                        <Link className="header__menu--link " to="/contact-us">Contact </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+
+
+
+
+                {isMenuOpen && (
+        <div className="offcanvas__header open">
+          <div className="offcanvas__inner">
+            <div className="offcanvas__logo">
+              <Link className="offcanvas__logo_link" to="/">
+                <img src={logoImage} alt="Grocee Logo" width={158} height={36} />
+              </Link>
+              <button className="offcanvas__close--btn" onClick={closeMenu}>close</button>
+            </div>
+            <nav className="offcanvas__menu">
+              <ul className="offcanvas__menu_ul">
+                <li className="offcanvas__menu_li">
+                  <Link className="offcanvas__menu_item" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li className="offcanvas__menu_li">
+                  <Link className="offcanvas__menu_item" to="#" onClick={toggleShopSubMenu}>
+                    Shop
+                    <button className="offcanvas__sub_menu_toggle" onClick={toggleShopSubMenu} />
+                  </Link>
+                  <ul className="offcanvas__sub_menu" style={{ display: isShopSubMenuOpen ? 'block' : 'none' }}>
+                    <li className="offcanvas__sub_menu_li">
+                      <Link className="offcanvas__sub_menu_item" to="#" onClick={toggleMenSubMenu}>
+                        Men
+                        <button className="offcanvas__sub_menu_toggle" onClick={toggleMenSubMenu} />
+                      </Link>
+                      <ul className="offcanvas__sub_menu" style={{ display: isMenSubMenuOpen ? 'block' : 'none' }}>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Round Neck T-shirt</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">V-Cut Neck T-shirt</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Full Sleev T-shirt</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Oversized T-shirt</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Vest</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Customized Works</Link></li>
+                      </ul>
+                    </li>
+                    <li className="offcanvas__sub_menu_li">
+                      <Link className="offcanvas__sub_menu_item" to="#" onClick={toggleWomenSubMenu}>
+                        Women
+                        <button className="offcanvas__sub_menu_toggle" onClick={toggleWomenSubMenu} />
+                      </Link>
+                      <ul className="offcanvas__sub_menu" style={{ display: isWomenSubMenuOpen ? 'block' : 'none' }}>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Round Neck T-shirt</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">V-Cut Neck T-shirt</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Full Sleev T-shirt</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Oversized T-shirt</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Vest</Link></li>
+                        <li className="offcanvas__sub_menu_li"><Link className="offcanvas__sub_menu_item" to="/shop">Customized Works</Link></li>
+                        {/* Add more submenu items for Women here */}
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li className="offcanvas__menu_li">
+                  <Link className="offcanvas__menu_item" to="/about-us">
+                    About
+                  </Link>
+                </li>
+                <li className="offcanvas__menu_li">
+                  <Link className="offcanvas__menu_item" to="/contact-us">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+              <div className="offcanvas__account--items">
+                <Link className="offcanvas__account--items__btn d-flex align-items-center" to="/login">
+                  <span className="offcanvas__account--items__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20.51" height="19.443" viewBox="0 0 512 512">
+                      <path
+                        d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={32}
+                      />
+                      <path
+                        d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeMiterlimit={10}
+                        strokeWidth={32}
+                      />
+                    </svg>
+                  </span>
+                  <span className="offcanvas__account--items__label">Login / Register</span>
+                </Link>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
